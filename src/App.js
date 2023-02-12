@@ -3,10 +3,10 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      <h1>Olá, Rayane!</h1>
+    <div className='p-3'>
+      <h1>Olá, {'<Usuário>'}!</h1>
       <p>Vamos começar nossa aula?</p>
-    </>
+    </div>
   );
 }
 
