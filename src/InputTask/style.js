@@ -13,27 +13,26 @@ export const Container = styled.div`
 
 export const Input = styled.input`
   ${Container} & {
-    width: calc(100% - 65px);
-    text-indent: 16px;
+    width: calc(100% - 50px);
+    text-indent: 0.5em;
     transition: 0.4s;
     background: rgba(255, 255, 255, 0.0);
     border: none;
     outline: none;
     color: #fff;
-    z-index: 0;
     font-size: 1.0em;
+    padding: 0 0.5em 0 0.5em;
   }
 `;
 
 export const ButtonIcon = styled.div`
   ${Container} & {
-    /* pointer-events: none; */
     border-radius: inherit;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    background-color: #21c25e;
   }
 `;

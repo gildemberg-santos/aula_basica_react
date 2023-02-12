@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const ListTaskItem = styled.div`
   display: flex;
-  padding: 6px 10px 6px 25px;
-  /* border-radius: 10px  50px 50px 10px; */
+  padding: 6px;
   border-radius: 50px;
   transition: 0.4s;
+  align-items: center;
 
   &:hover {
     background: rgba(255, 255, 255, 0.1)
@@ -13,20 +13,25 @@ export const ListTaskItem = styled.div`
 `;
 
 export const ListTaskContainer = styled.div`
-  ${ListTaskItem}:hover {
-    /* background-color: ${props => props.accent}; */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+`;
+
+export const ListTaskItemText = styled.div`
+  ${ListTaskItem} & {
+    width: calc(100% - 50px);
+    padding: 0 1em 0 1em;
   }
 `;
 
 export const ButtonIcon = styled.div`
   & {
-    border-radius: 50px !important;
-    border-radius: inherit;
+    display: flex;
     width: 50px;
     height: 50px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    border-radius: inherit !important;
+    background-color: #21c25e;
   }
 `;

@@ -3,36 +3,35 @@ import {
   Container,
   Input,
   ButtonIcon,
-} from './style.js';
+} from "./style.js";
 
-const InputTask = ({ icon, accent, onClick, value, ...props }) => {
+const InputTask = ({ icon, onClick, value, placeholder, ...props }) => {
   const inputRef = useRef(null);
 
   const handleClick = () => {
     onClick(inputRef.current.value);
-    inputRef.current.value = '';
+    inputRef.current.value = "";
   }
 
   const handleKeyUp = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       onClick(inputRef.current.value);
-      inputRef.current.value = '';
+      inputRef.current.value = "";
     }
   }
 
   return (
-    <Container>
+    <Container {...props}>
       <Input
         ref={inputRef}
         onKeyUp={(e) => handleKeyUp(e)}
         type="text"
-        {...props}
+        placeholder={placeholder}
       />
 
       <ButtonIcon
         onClick={() => handleClick()}
-        className={`bi bi-file-earmark-plus`}
-        style={{ backgroundColor: accent }}
+        className="bi bi-file-earmark-plus"
       />
     </Container>
   );
