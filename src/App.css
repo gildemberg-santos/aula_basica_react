@@ -6,3 +6,11 @@ body {
   background: #000000;
   color: #fff;
 }
+
+.color-accent {
+  color: #21c25e;
+}
+
+.background-accent {
+  background: #21c25e;
+}

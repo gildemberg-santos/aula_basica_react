@@ -33,6 +33,5 @@ export const ButtonIcon = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #21c25e;
   }
 `;

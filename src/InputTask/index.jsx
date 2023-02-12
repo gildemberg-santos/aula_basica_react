@@ -31,7 +31,7 @@ const InputTask = ({ icon, onClick, value, placeholder, ...props }) => {
 
       <ButtonIcon
         onClick={() => handleClick()}
-        className="bi bi-file-earmark-plus"
+        className="bi bi-file-earmark-plus background-accent"
       />
     </Container>
   );

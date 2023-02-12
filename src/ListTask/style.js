@@ -32,6 +32,5 @@ export const ButtonIcon = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: inherit !important;
-    background-color: #21c25e;
   }
 `;
