@@ -1,10 +1,6 @@
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 body {
-  background: #000000;
   font-family: 'Roboto', sans-serif;
-  color: #fff;
-  border-radius: 10px;
-  scrollbar-width: 1px;
-  scrollbar-color: #fff #000;
 }
