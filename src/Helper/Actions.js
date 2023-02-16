@@ -34,30 +34,38 @@ export const Delete = (index) => {
 };
 
 export const notificationPermission = () => {
-  Notification.requestPermission((result) => {
-    if (result === "denied") {
-      console.log("Notification permission denied");
-      return;
-    }
-    if (result === "default") {
-      console.log("Notification permission dismissed");
-      return;
-    }
-  });
+  try {
+    Notification.requestPermission((result) => {
+      if (result === "denied") {
+        console.log("Notification permission denied");
+        return;
+      }
+      if (result === "default") {
+        console.log("Notification permission dismissed");
+        return;
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export const showNotification = (title, message) => {
-  notificationPermission();
+  try {
+    notificationPermission();
 
-  if (!('serviceWorker' in navigator)) { 
-    new Notification(title, { body: message, icon: "logo512.png" });
-    return; 
-  }
-  
-  if (!('PushManager' in window)) { 
-    new Notification(title, { body: message, icon: "logo512.png" });
-    return; 
-  }
+    if (!('serviceWorker' in navigator)) {
+      new Notification(title, { body: message, icon: "logo512.png" });
+      return;
+    }
 
-  new Notification(title, { body: message, icon: "logo512.png" });
+    if (!('PushManager' in window)) {
+      new Notification(title, { body: message, icon: "logo512.png" });
+      return;
+    }
+
+    new Notification(title, { body: message, icon: "logo512.png" });
+  } catch (error) {
+    console.log(error);
+  }
 }
