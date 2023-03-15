@@ -24,8 +24,8 @@ function App() {
       <InputTask className="m-4" onClick={handleNewTask} placeholder="# New Task" />
       <ListTask className="m-4" list={listTask} />
       <ChatLeadster
-        identifier="uywvgPeHfDKjpHeQlxwfdfnTj"
-        scriptUrl="https://storage.googleapis.com/neuro-cdn/neurolead/qa_test/neurolead.js"
+        identifier="P2IlCcN90I9INTRBQsizt5K5u"
+        scriptUrl="https://cdn.neurologic.com.br/neurolead/neurolead.min.js"
       />
     </>
   );
